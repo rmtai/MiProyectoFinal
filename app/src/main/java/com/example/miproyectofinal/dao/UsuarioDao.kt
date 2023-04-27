@@ -8,7 +8,7 @@ import com.example.miproyectofinal.entities.Usuario
 interface DaoUsuario {
 
     @Query("SELECT * FROM usuario ORDER BY USER ASC")
-    suspend fun obtenerUsuarios(): LiveData<List<Usuario>>
+    suspend fun obtenerUsuarios(): MutableList<Usuario>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun agregarUsuario(usuario: Usuario)

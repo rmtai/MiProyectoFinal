@@ -9,7 +9,7 @@ import com.example.miproyectofinal.entities.Item
 interface ItemDao {
 
     @Query("SELECT * FROM item ORDER BY name ASC")
-    fun obtenerItem(): LiveData<List<Item>>
+    fun obtenerItem(): MutableList<Item>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun agregarItem(item: Item)
