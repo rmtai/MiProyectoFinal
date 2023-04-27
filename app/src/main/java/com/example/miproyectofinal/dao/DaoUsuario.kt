@@ -1,6 +1,5 @@
 package com.example.miproyectofinal.dao
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
 import com.example.miproyectofinal.entities.Usuario
 
